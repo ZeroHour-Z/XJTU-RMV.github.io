@@ -68,6 +68,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: '前言', link: '/前言/' },
       { text: '贡献指南', link: '/前言/贡献指南' },
+      { text: '快速查阅', link: '/快速查阅/' },
       { text: '任务书', link: '/任务书/' },
     ],
 
@@ -86,6 +87,14 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '安装 Ubuntu 20.04', link: '/任务书/Ubuntu' },
+        ]
+      },
+      {
+        text: '快速查阅',
+        link: '/快速查阅/',
+        collapsed: true,
+        items: [
+          { text: 'Windows 安装 C++ 环境', link: '/快速查阅/windows-cpp' },
         ]
       },
     ],
