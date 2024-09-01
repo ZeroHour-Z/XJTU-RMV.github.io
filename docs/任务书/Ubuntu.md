@@ -70,7 +70,7 @@ Linux 系统是一套免费使用和自由传播的类 Unix 操作系统，是�
 :::
 
 1. 从清华源下载 [ubuntu-20.04.6-desktop-amd64.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04.6/ubuntu-20.04.6-desktop-amd64.iso)（点一下直接下载，或者不行的话可以手动前往 [清华源界面](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04.6/) 选择 `ubuntu-20.04.6-desktop-amd64.iso` 下载）。（Ubuntu 22.04 使用链接 [22.04.4](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/22.04.4/)，选择 [ubuntu-22.04.4-desktop-amd64.iso](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/22.04.4/ubuntu-22.04.4-desktop-amd64.iso)）。
-2. 下载 [Ventoy-LatestRelease](https://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/LatestRelease/)（从 GitHub 下载需要一定网络条件，此处选择的链接源自南京大学镜像站），或者不行的话手动前往其 [官网](https://www.ventoy.net/cn/index.html) 挑选下载。
+2. 下载 [Ventoy-LatestRelease](https://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/LatestRelease/)（从 GitHub 下载需要一定网络条件，此处选择的链接源自南京大学镜像站），或者不行的话手动前往其 [官网](https://www.ventoy.net/cn/index.html) 挑选下载，如下载 [ventoy-1.0.99-windows.zip](https://mirrors.nju.edu.cn/github-release/ventoy/Ventoy/LatestRelease/ventoy-1.0.99-windows.zip)。
 3. 解压下载的 Ventoy 压缩包，该压缩包开袋即食，进入解压后的文件夹，启动 `Ventoy2Disk.exe`，应出现以下界面：
 
 ![](https://pic.axi404.top/Ventoy2Disk启动界面.ic25bh550.webp)
@@ -86,6 +86,12 @@ Linux 系统是一套免费使用和自由传播的类 Unix 操作系统，是�
 ## 安装系统
 
 ### 准备空间
+
+:::warning
+在安装系统之前需要注意，自己的系统盘格式为 MBR 还是 GPT，我们的教程在 GPT 格式下进行，因此不确定在 MBR 中的适配性。现在绝大多数的硬盘应该全部为 GPT 格式，但是保险起见，可以进行检查。
+按下 `Win+R` 进入运行窗口，输入 `diskpart`，进入磁盘管理界面，输入 `list disk`，可以看到 GPT 格式的磁盘在表格中标记有星号。
+![](https://Axi404.github.io/picx-images-hosting/image.8s38wkp596.webp)
+:::
 
 首先，在安装系统之前，还记得我们之前说的吗？要保证你有空闲的 100GB 空间，当然，这前提是，你失去了这 100GB 空间之后，你的 Windows 系统的空间依然不会显得逼仄（尤其是 C 盘，Windows 系统的文件会不断变大，假如说不知道缩减方法，不建议盲目删除一些东西，而也因此需要为 C 盘留下一定的空间余量）。
 
