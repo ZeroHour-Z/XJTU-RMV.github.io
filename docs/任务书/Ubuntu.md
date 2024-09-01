@@ -119,18 +119,18 @@ Linux 系统是一套免费使用和自由传播的类 Unix 操作系统，是�
 
 插入制作好的启动盘，重启电脑，重启的过程中狂按 `F12`（这一步为调用 one time boot，一些电脑没有此功能，可能需要在 BIOS 中的启动顺序中将你的 U 盘顺序调至最高），然后在出现的页面的左下角找到你的 U 盘（可以尝试辨别一下是哪个，或者先退出，然后去 Windows 里看看你的 U 盘的学名）即可进入上方给出过的 Ventoy 菜单界面，理论来说应该只有我们需要安装的 `Ubuntu20.04.5`，按下 `Enter`（回车）进行确认。
 
-<img src="https://pic.axi404.top/打开U盘.1023twiip5.webp" style="zoom:33%;" />
+<div><img src="https://pic.axi404.top/打开U盘.1023twiip5.webp" style="zoom:33%;" /></div>
 
-<img src="https://pic.axi404.top/Ventoy选择Ubuntu.5c0x1g1u77.webp" style="zoom:33%;" />
+<div><img src="https://pic.axi404.top/Ventoy选择Ubuntu.5c0x1g1u77.webp" style="zoom:33%;" /></div>
 
-<img src="https://pic.axi404.top/Ventoy选择模式.54xp60foro.webp" style="zoom: 33%;" />
+<div><img src="https://pic.axi404.top/Ventoy选择模式.54xp60foro.webp" style="zoom: 33%;" /></div>
 
 值得一提的是在大多数的非图形化页面中，并不存在光标这一物体，需要通过键盘的上下左右键（不是 WASD）进行选择，用 Enter 键（回车键）进行确认。
 可能出现选项，选择第一项 Ubuntu 即可，之后会显示正在检测文件。
 
-<img src="https://pic.axi404.top/选择Ubuntu安装.4n7nhfeb7a.webp" style="zoom:50%;" />
+<div><img src="https://pic.axi404.top/选择Ubuntu安装.4n7nhfeb7a.webp" style="zoom:50%;" /></div>
 
-<img src="https://pic.axi404.top/检查磁盘内容.3uurzoxpgr.webp" style="zoom:33%;" />
+<div><img src="https://pic.axi404.top/检查磁盘内容.3uurzoxpgr.webp" style="zoom:33%;" /></div>
 
 等待一段时间，应该可以见到如下界面(暂时无需联网)：
 
