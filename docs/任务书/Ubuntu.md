@@ -126,6 +126,7 @@ Linux 系统是一套免费使用和自由传播的类 Unix 操作系统，是�
 <div><img src="https://pic.axi404.top/Ventoy选择模式.54xp60foro.webp" style="zoom: 33%;" /></div>
 
 值得一提的是在大多数的非图形化页面中，并不存在光标这一物体，需要通过键盘的上下左右键（不是 WASD）进行选择，用 Enter 键（回车键）进行确认。
+
 可能出现选项，选择第一项 Ubuntu 即可，之后会显示正在检测文件。
 
 <div><img src="https://pic.axi404.top/选择Ubuntu安装.4n7nhfeb7a.webp" style="zoom:50%;" /></div>
@@ -270,3 +271,22 @@ chmod 一般用于修改文件的读写运行权限，其中读写与运行用�
 ## 后续安排
 
 后续会发布单独的任务书进行后续环境搭建的任务讲解与教程，读者可以先行尝试，但需要注意的是，自行安装的环境可能无法与后续任务要求的对齐，此时需要读者自行解决。
+
+## 额外
+
+一些特殊的情况在这里说明，如奇怪的报错，这里给出一些可能的解决方案。
+
+### 安装显卡驱动
+
+在安装的过程中，可能会出现屏幕的黑屏/花屏等情况，此为正常现象，需要安装显卡驱动等。此 Bug 情况需要在两个步骤分别进行操作：
+
+在 Ventoy 选择 `Boot in normal mode` 之后，选择 `Ubuntu (safe graphics)` 而非 `Ubuntu`。
+
+在安装完系统之后，在确认已经完成换源等操作之后，`Ctrl + Alt + t` 进入终端，并执行：
+
+```bash
+sudo apt update
+sudo ubuntu-drivers autoinstall
+```
+
+安装完毕之后重启，`reboot`。
