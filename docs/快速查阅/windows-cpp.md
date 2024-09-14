@@ -43,7 +43,11 @@
 
 至此，VSCode 的基础配置已完成。
 
-## 安装 mingw 并设置环境变量
+## 安装 MinGW 并设置环境变量
+
+:::tip
+使用 MinGW 是一种方法，在下方我们也提供了使用 MSYS2 的方法，两种方法仅选择其中一种即可。
+:::
 
 前往 [GitHub - niXman/mingw-builds-binaries: MinGW-W64 compiler binaries](https://github.com/niXman/mingw-builds-binaries)，点击右侧的 Releases 自动进入最新版本，选择文件列表中形如 `x86_64_xx.xx.x-release-posix-seh-ucrt-rt-vxx-` 的文件下载。或者，可以通过 [此链接](https://github.com/niXman/mingw-builds-binaries/releases/download/14.2.0-rt_v12-rev0/x86_64-14.2.0-release-posix-seh-ucrt-rt_v12-rev0.7z) 直接开始下载。
 
@@ -104,6 +108,69 @@ int main(){
 ![](https://pic.axi404.top/image.7egq9isucl.webp)
 
 等待编译完成，程序就会自动执行了
+
+## Windows 安装 MSYS2
+
+使用 MSYS2 来配置 C++ 环境也是一种常见的选择，相较于 MinGW，MSYS2 的优势在于其包管理器 pacman，可以方便地安装各种库。
+
+前往 [MSYS2 官网](https://www.msys2.org/)，点击下方的 Download，下载安装包。
+
+![](https://pic.axi404.top/image.2donjcu2j6.webp)
+
+作为参考，其版本 `msys2-x86_64-20240727.exe` 的 SHA256 为 `20D452E66CC95F975B2A8C5D814BA02E92481071580E80A3E3502A391FFF6D2A`。
+
+安装时，建议选择 C 盘作为安装地点，新建一个空文件夹即可。
+
+![](https://pic.axi404.top/image.32hx3dm52l.webp)
+
+安装完成后，按照安装 MinGW 中所述的方法，将 `C:\msys64\ucrt64\bin` 加入环境变量。
+
+打开 MSYS2 根目录下的 `ucrt64.exe`，在弹出的命令行窗口中，输入以下命令：
+
+```shell
+pacman -Syu
+pacman -S mingw-w64-ucrt-x86_64-toolchain
+pacman -S mingw-w64-ucrt-x86_64-clang
+pacman -S mingw-w64-ucrt-x86_64-clang-tools-extra
+pacman -S mingw-w64-ucrt-x86_64-cmake
+```
+
+然后 `Win + X` 选择终端，在终端中依次输入：
+
+```shell
+gcc     # 输出为 gcc.exe: fatal error: no input files
+clangd  # 输出为 clangd is a language server that provides IDE-like features ......
+cmake   # 输出为 Usage
+        #       cmake [options] <path-to-source>
+        #       cmake [options] <path-to-existing-build>
+        #       cmake [options] -S <path-to-source> -B <path-to-build>
+```
+
+## 配置 VSCode 的 CMake Tools 插件
+
+在 VSCode 的插件中选择安装 clangd/CMake/CMake Tools，注意，无需安装 C++ 插件，如果已经安装，可以选择禁用或者卸载。
+
+在 VSCode 中选择新文件夹，然后通过 `ctrl + shift + P` 选择 `CMake: Quick Start`，之后依次进行：
+
+- 输入自己的项目名称。
+- 选择 `C++`。
+- 选择 `Executable`。
+- 在选择 CPack 等的界面和之后的保存预设界面，连点两次 `Esc`。
+
+如有报错，先尝试重启 VSCode，之后可以在下方评论区反馈。
+
+在 VSCode 左下角的齿轮与播放按钮分别代表编译以及编译并运行：
+
+![](https://pic.axi404.top/image.1e8k67vge1.webp)
+
+同时在 Windows 中此时也可以正常使用 CMake 的流程进行编译：
+
+```shell
+mkdir build
+cd build
+cmake ..
+cmake --build .
+```
 
 ## 扩展
 
