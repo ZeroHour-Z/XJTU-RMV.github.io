@@ -87,6 +87,7 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: '安装 Ubuntu 20.04', link: '/任务书/Ubuntu' },
+          { text: '使用 OpenCV', link: '/任务书/OpenCV' },
         ]
       },
       {
