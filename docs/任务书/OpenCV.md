@@ -49,6 +49,7 @@ opencv_project/
 在 `opencv_project` 中使用以下命令下载指定的测试图片至 `resources/` 目录：
 
 ```bash
+mkdir resources
 wget -O resources/test_image.png https://pic.axi404.top/95075810_p0.4ckucuqdh8.png
 ```
 
