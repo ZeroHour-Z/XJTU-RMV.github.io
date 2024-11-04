@@ -98,6 +98,7 @@ export default defineConfig({
         items: [
           { text: 'Windows 安装 C++ 环境', link: '/快速查阅/windows-cpp' },
           { text: '使用 GPT 转发站', link: '/快速查阅/gpt' },
+          { text: '海康相机注意事项', link: '/快速查阅/hik_camera' },
         ]
       },
     ],
