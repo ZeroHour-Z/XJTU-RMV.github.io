@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "RMVision-001"
+  name: "RMVision"
   text: "西安交大视觉组教程。"
   tagline: Welcome to XJTURM. 视觉组出品。
   actions:
@@ -16,9 +16,9 @@ hero:
     - theme: alt
       text: 🧭贡献指南
       link: /前言/贡献指南
-  # image:
-  #   src: /logo.png
-  #   alt: XiStudyGroup logo
+  image:
+    src: /DX_logo_black.svg
+    alt: XJTU-RMV logo
 
 features:
   - title: 基础教学

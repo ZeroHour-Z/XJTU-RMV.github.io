@@ -5,6 +5,9 @@ import { generateSidebar } from 'vitepress-sidebar';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   appearance: false,
+  head: [
+    ['link', { rel: 'icon', href: '/DX_logo_blue.svg' }]
+  ],
   markdown: {
     image: {
       lazyLoading: true
@@ -41,7 +44,7 @@ export default defineConfig({
     },
     footer: { 
       message: 'Released under the MIT License.', 
-      copyright: 'Copyright © 2023-2024present XJTU-RMV', 
+      copyright: 'Copyright © 2023-2025present XJTU-RMV', 
     }, 
     docFooter: { 
       prev: '上一页', 
@@ -58,10 +61,10 @@ export default defineConfig({
     search: { 
       provider: 'local'
     }, 
-    // logo: {
-    //   src: '/logo.svg',
-    //   alt: 'Logo: XiStudyGroup',
-    // },
+    logo: {
+      src: '/DX_logo_black.svg',
+      alt: 'Logo: XJTU-RMV',
+    },
     siteTitle: false, //标题隐藏
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -99,6 +102,7 @@ export default defineConfig({
           { text: 'Windows 安装 C++ 环境', link: '/快速查阅/windows-cpp' },
           { text: '使用 GPT 转发站', link: '/快速查阅/gpt' },
           { text: '海康相机注意事项', link: '/快速查阅/hik_camera' },
+          { text: '补充内容', link: '/快速查阅/backup' },
         ]
       },
     ],
